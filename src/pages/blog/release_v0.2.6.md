@@ -49,6 +49,17 @@ Since the WAL is placed first, if the program crashes during the index construct
 
 Of course, there is currently a possibility of data loss. In order to improve performance, we do not flush the disk every time a WAL log is written, because the performance will be very low. We use the configurable flush time (default 1s) to perform a disk flush (sync) action, if the physical machine is powered off and crashes at this time, the data within 1s may be lost.
 
+```js
+export interface State {
+  items: Movie[];
+  error: string | null; // track errors
+}
+
+export const initialState = {
+  items: [],
+  error: null, // default error value
+};
+```
 Finally, thanks to xiaojun207 for his contribution to the Zinc community, 16 PRs have been contributed 🎉
 [xiaojun207](https://github.com/zinclabs/zinc/pulls?q=is:pr%20author:xiaojun207)
 

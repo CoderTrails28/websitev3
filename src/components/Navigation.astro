@@ -18,7 +18,7 @@ import NavMenus from './NavMenus.astro';
         data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-repo-forked"
         data-size="large" data-show-count="true" aria-label="Fork zinclabs/zinc on GitHub" />
     </div>
-    <NavMenus client:load />
+    <NavMenus />
   </div>
   <div class="tabAndbelow">
     <template id="githubButtonsTemplate">
@@ -40,7 +40,7 @@ import NavMenus from './NavMenus.astro';
     </div>
     <div class="mobile-menu">
       <div class="container">
-        <NavMenus client:load />
+        <NavMenus />
       </div>
     </div>
   </div>
